@@ -35,15 +35,26 @@ const { title } = Astro.props;
     scroll-behavior: smooth;
   }
 
-  /* Mejora del scrollbar */
+  /* Mejora del scrollbar para evitar el corte visual en el footer */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
+  
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    /* Al usar transparent, el scrollbar tomará el color de la sección donde esté (incluyendo el footer oscuro) */
+    background: transparent;
   }
+  
   ::-webkit-scrollbar-thumb {
     background: #0046ad;
     border-radius: 10px;
+    /* Añadimos un borde transparente para que la barra se vea más estilizada */
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #003a8f;
+    background-clip: content-box;
   }
 </style>
