@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Footer from '../components/Footer.astro';
+
+// Datos informativos de la empresa
+const estadisticas = [
+  { valor: "100%", etiqueta: "Garantía en equipos" },
+  { valor: "24/7", etiqueta: "Soporte técnico" },
+  { valor: "Huancayo", etiqueta: "Sede central" },
+  { valor: "Región Junín", etiqueta: "Cobertura total" }
+];
+---
+
+<Layout title="Grupo Castro">
+    <Navbar />
+    
+    <main>
+        <Hero />
+        <Services />
+		<section class="py-10 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                    <span class="font-black text-slate-800 text-xl tracking-tighter">HIKVISION</span>
+                    <span class="font-black text-slate-800 text-xl tracking-tighter">DAHUA</span>
+                    <span class="font-black text-slate-800 text-xl tracking-tighter">EZVIZ</span>
+                    <span class="font-black text-slate-800 text-xl tracking-tighter">STARLINK</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>

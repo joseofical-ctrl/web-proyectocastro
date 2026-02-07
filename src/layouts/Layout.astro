@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Soluciones Tecnológicas - Grupo Castro" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <link rel="icon" type="image/png" href="/logo.png" />
+    
+    <title>{title}</title>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-700">
+    <slot /> 
+  </body>
+</html>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  
+  :root {
+    --accent: 0, 70, 173;
+  }
+
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  /* Mejora del scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0046ad;
+    border-radius: 10px;
+  }
+</style>
