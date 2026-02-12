@@ -1,46 +1,43 @@
 ---
 ---
-<section class="py-12 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-14">
-    <div class="relative group overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] bg-white border border-slate-200 p-8 md:p-14 shadow-xl shadow-slate-100/50">
-      
-      <div class="absolute top-0 right-0 w-72 h-72 bg-[#e02c87]/5 rounded-full blur-[90px] -mr-36 -mt-36 pointer-events-none"></div>
-      <div class="absolute bottom-0 left-0 w-72 h-72 bg-[#90be44]/5 rounded-full blur-[90px] -ml-36 -mb-36 pointer-events-none"></div>
-      <div class="absolute top-1/2 left-1/4 w-40 h-40 bg-[#f4a52b]/5 rounded-full blur-[60px] pointer-events-none"></div>
-
-      <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
-        
-        <div class="flex-1 text-center lg:text-left">
-          <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-5 tracking-tight italic">
-            Tienda de equipos en linea</span>
-          </h2>
-          <p class="text-slate-600 text-base md:text-xl max-w-2xl leading-relaxed">
-            Compra cámaras de seguridad, paneles solares y tecnología con <span class="text-blue-400 font-bold">garantía directa</span>. Todo lo que tu negocio necesita en un solo lugar.
-          </p>
-        </div>
-
-        <div class="w-full lg:w-auto">
-          <a 
-            href="https://equipos.grupocastro.org/" 
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group relative inline-flex items-center justify-center w-full lg:w-auto px-10 py-5 font-bold text-white bg-[#1d68b2] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-blue-100"
-          >
-            <span class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            
-            <span class="relative flex items-center gap-3 text-lg">
-              Visitar Tienda
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14m-7-7 7 7-7 7"/>
-              </svg>
-            </span>
-          </a>
-        </div>
-
-      </div>
+<div class="fixed left-0 top-1/2 -translate-y-1/2 z-[60] group pointer-events-none">
+  <a 
+    href="https://equipos.grupocastro.org/" 
+    target="_blank"
+    rel="noopener noreferrer"
+    class="pointer-events-auto flex items-center bg-white border border-slate-200 shadow-2xl rounded-r-2xl transition-all duration-500 ease-in-out -translate-x-[calc(100%-52px)] md:-translate-x-[calc(100%-64px)] hover:translate-x-0"
+  >
+    <div class="px-4 md:px-6 py-3 md:py-4">
+      <p class="text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-bold text-blue-600 mb-1">Catálogo Online</p>
+      <h3 class="text-sm md:text-lg font-bold text-slate-800 whitespace-nowrap tracking-tight">
+        Tienda de Equipos
+      </h3>
     </div>
-  </div>
 
-</section>
+    <div class="w-[52px] h-[65px] md:w-[64px] md:h-[80px] flex flex-col items-center justify-center bg-slate-900 group-hover:bg-blue-700 transition-colors duration-300 rounded-r-xl gap-0.5 md:gap-1">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.56-7.43a.5.5 0 0 0-.49-.61H6.52"/>
+      </svg>
+      <span class="text-[8px] md:text-[10px] font-black text-white tracking-tighter uppercase">Tienda</span>
+    </div>
+  </a>
+</div>
 
+<style>
+  @keyframes slideIn {
+    from { transform: translateY(-50%) translateX(-100%); }
+    to { transform: translateY(-50%) translateX(calc(-100% + 52px)); }
+  }
+  
+  @media (min-width: 768px) {
+    @keyframes slideIn {
+      from { transform: translateY(-50%) translateX(-100%); }
+      to { transform: translateY(-50%) translateX(calc(-100% + 64px)); }
+    }
+  }
 
+  div {
+    animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+</style>

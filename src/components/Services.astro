@@ -6,13 +6,13 @@ const servicios = [
     title: "Gestión y Facturación",
     desc: "Sistemas de control interno y emisión de comprobantes electrónicos con gestión de inventarios y ventas.",
     icon: "📊",
-    msg: "Hola, deseo información sobre el sistema de facturación y control interno."
+    msg: "Hola, deseo información sobre los sistemas de facturación y control interno."
   },
   {
     title: "Seguridad Electrónica",
     desc: "Venta e instalación de sistemas de videovigilancia y monitoreo para la protección de activos.",
     icon: "📹",
-    msg: "Hola, me interesa una cotización para la instalación de cámaras de seguridad."
+    msg: "Hola, me interesa una cotización para la instalación decámaras de seguridad."
   },
   {
     title: "Energía Renovable",
@@ -24,13 +24,13 @@ const servicios = [
     title: "Conectividad Satelital",
     desc: "Soluciones de internet de alta velocidad mediante tecnología satelital para máxima cobertura.",
     icon: "🛰️",
-    msg: "Hola, solicito información sobre la instalación de internet satelital StarLink."
+    msg: "Hola, solicito información sobre la instalación de internet satelital."
   },
   {
     title: "Desarrollo Web",
     desc: "Diseño de plataformas corporativas optimizadas para buscadores y navegación móvil.",
     icon: "🌐",
-    msg: "Hola, me gustaría cotizar el desarrollo de una página web."
+    msg: "Hola, me gustaría cotizar el desarrollo de una página web profesional."
   },
   {
     title: "Equipamiento POS",
@@ -41,23 +41,23 @@ const servicios = [
 ];
 ---
 
-<section id="servicios" class="py-24 bg-slate-50 scroll-mt-10">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-slate-900 mb-4">Servicios Especializados</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto text-lg">
+<section id="servicios" class="py-16 md:py-24 bg-slate-50 scroll-mt-10">
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Servicios Especializados</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto text-base md:text-lg">
         Personal técnico calificado para instalaciones y soporte en toda la región.
       </p>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       {servicios.map(s => (
-        <div class="group relative bg-white p-8 rounded-3xl border border-slate-200 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+        <div class="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
           
           <div class="transition-all duration-300 group-hover:opacity-10 group-hover:blur-sm">
-            <div class="text-5xl mb-6">{s.icon}</div>
-            <h3 class="text-2xl font-bold text-slate-900 mb-3">{s.title}</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6 italic">{s.desc}</p>
+            <div class="text-4xl md:text-5xl mb-4 md:mb-6">{s.icon}</div>
+            <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-3">{s.title}</h3>
+            <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-6 italic">{s.desc}</p>
           </div>
 
           <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-blue-600/5 backdrop-blur-[2px]">
@@ -65,7 +65,7 @@ const servicios = [
               href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(s.msg)}`}
               target="_blank"
               rel="noopener noreferrer"
-              class="scale-90 group-hover:scale-100 transition-transform duration-300 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-xl shadow-blue-200 flex items-center gap-2"
+              class="scale-90 group-hover:scale-100 transition-transform duration-300 bg-blue-600 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-xl font-bold shadow-xl shadow-blue-200 flex items-center gap-2 text-sm md:text-base"
             >
               Más información
               <span>→</span>
@@ -76,5 +76,4 @@ const servicios = [
       ))}
     </div>
   </div>
-
 </section>
