@@ -1,22 +1,40 @@
 ---
 import '../styles/global.css';
+
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, "https://grupocastro.org");
+const description = "Grupo Castro: Soluciones tecnológicas en Huancayo. Expertos en seguridad electrónica, cámaras de vigilancia, facturación electrónica y conectividad satelital.";
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Soluciones Tecnológicas - Grupo Castro" />
     <meta name="viewport" content="width=device-width" />
-    
     <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="canonical" href={canonicalURL} />
     
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://grupocastro.org/og-image.jpg" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://grupocastro.org/og-image.jpg" />
+
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-700">
     <slot /> 
